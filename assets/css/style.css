@@ -27,10 +27,11 @@ body {
 }
 
 main {
-    width: 447px;
-    height: 266px;
+    max-width: 447px;
+    height: auto;
     border-radius: 10px;
     background-color: hsl(217, 19%, 24%);
+    width: 75%;
 }
 
 .box-header {
@@ -43,41 +44,54 @@ main {
 
 .box-main {
     text-align: center;
-    padding: 0 35px;
+    padding: 0 20px;
     margin-top: 20px;
-    font-size: smaller;
+    margin-bottom: 20px;
+    font-size: 19px;
     font-weight: 800;
     color: hsl(193, 38%, 86%);
+    line-height: 150%;
+}
+
+.glow {
+    box-shadow: 1px 1px 20px 5px hsl(150, 100%, 66%);
+}
+
+#grey {
+    background-color: grey;
 }
 
 .box-divider {
-    margin-top: 16px;
-    padding: 0 35px;
+    margin: 20px 35px;
+    height: 25px;
+    background: url('../images/pattern-divider-mobile.svg') no-repeat center center / contain;
 }
 
 .box-dice {
     margin-top: 23px;
+    margin-bottom: -28px;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
-.dice-circle {
+#dice-circle {
     background-color: hsl(150, 100%, 66%);
     border-radius: 50%;
-    padding: 9px 14px;
+    padding: 8px 14px;
 }
 
 footer {
     position: fixed;
     bottom: 0;
-    left: 45%;
-    font-size: 10px;
+    font-size: 12px;
     display: flex;
     justify-content: center;
     margin-top: 100px;
     margin-bottom: 10px;
     text-align: center;
+    line-height: 180%;
 }
 
 a, a:visited {
@@ -88,4 +102,16 @@ a, a:visited {
 a:hover {
     color: white;
     text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+    .box-main {
+        font-size: 24px;
+    }
+    
+    .box-divider {
+        margin: 20px 35px;
+        height: 25px;
+        background: url('../images/pattern-divider-desktop.svg') no-repeat center center / contain;
+    }
 }
